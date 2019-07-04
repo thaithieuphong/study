@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            #canvas{
+                width: 680px;
+                height: 320px;
+                top: 300px;
+                left: 630px;
+                border:black solid;
+                position: absolute;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <canvas id="canvas" class="i"></canvas>
+        <script language='javascript'>
+            // LAY CANVAS
+            var canvas = document.getElementById('canvas');
+
+            // VE 2D
+            var ctx = getContext('2d');
+
+            // TAO CANVAS
+            for(i = 0; i < 5; i++){
+                ctx.fillStyle = "blue";
+            ctx.fillRect(110,125,100,100);
+            }
+            
+        </script>
+    </body>
+</html>

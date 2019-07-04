@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#canVas{
+			width: 100px;
+			height: 100px;
+			top: 400px;
+			left: 680px;
+			position: absolute;
+			background:black;
+		}
+	</style>
+</head>
+<body>
+		<!-- <canvas id='canVas'></canvas> -->
+		<script language="javascript" type="text/javascript">
+
+		//HANG SO KHOI TAO DU AN
+		const TIME_DELAY = 100;
+			const X_SPEED = 3;
+			const Y_SPEED = 3;
+			const Y_TOP = top;
+			const Y_BOTTOM = 500;
+			const X_LEFT = left;
+			const Y_RIGHT = 1000;
+			const X_SQUARE = 50;
+			const Y_SQUARE = 50;
+			const N = 5;
+
+			var canvas = document.getElementById('canVas');
+			for (var i = 0; i < N; i++)
+			{
+				canvas;
+			}
+		</script>
+
+	
+
+	<!-- <script language="javascript" type="text/javascript">
+            // Lấy thẻ HTML Canvas
+            // var mydiv = document.getElementById('myDiv');
+            var canvas1 = document.getElementById('canVas1');
+ 			var canvas2 = document.getElementById('canVas2');
+ 			var canvas3 = document.getElementById('canVas3');
+ 			var canvas4 = document.getElementById('canVas4');
+ 			var canvas5 = document.getElementById('canVas5');
+
+			// Tọa độ x = left, tọa độ y = top trong stype css
+ 			var coordinateXCanvas1 = 680;
+ 			var coordinateYCanvas1 = 400;
+			var coordinateXCanvas4 = 1010;
+ 			var coordinateYCanvas4 = 400;
+
+			
+
+
+ 			//var tanggiam = 1;
+ 			var timeSet = setInterval(moveTurnUpBeforeTurnRight, TIME_DELAY);
+
+			 fucntion moveUp()
+			 {
+
+			 }
+ 			
+
+			// function moveTurnUpBeforeTurnRight
+			function moveTurnUpBeforeTurnRight(){
+				if(coordinateYCanvas1 === 285)
+				{
+					if(coordinateXCanvas1 >= 1010){
+						clearInterval(timeSet);
+ 					}
+					else{
+						coordinateXCanvas1 += 1;
+ 						canvas1.style.left = coordinateXCanvas1 + 'px';
+					}
+				}
+				else{
+					coordinateYCanvas1 -= 1;
+ 					canvas1.style.top = coordinateYCanvas1 + 'px';
+				}
+			};
+
+			// function moveTurnDownBeforeTurnLeft
+			function moveTurnDownBeforeTurnLeft(){
+				if(coordinateYCanvas4 === 400)
+				{
+					if(coordinateXCanvas4 <= 1010){
+						clearInterval(timeSet);
+					}
+					else{
+						coordinateXCanvas4 -= 1;
+						canvas4.style.left = coordinateXCanvas4 + 'px';
+					}
+				}
+				else{
+					coordinateYCanvas4 += 1;
+					canvas4.style.top = coordinateYCanvas4 + 'px';
+				}
+
+			};
+			// 	moveTurnUp();
+			// 	moveTurnRigt();
+			// }
+			// main();
+			
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ve canvas</title>
+        <style type="text/css">
+            canvas {
+                border: 1px solid black;
+                position: absolute;
+                
+            }
+        </style>
+    </head>
+    <body>
+            <canvas id="Canvas" width="600" height="350"></canvas>
+            <script type="text/javascript">
+        
+                    // LAY DOI TUONG CANVAS
+                    var canvas = document.getElementById("Canvas");
+                    var ctx = canvas.getContext("2d");
+
+                    // TAO CANVAS
+                    for(var i = 0; i < 5; i++){
+                        ctx.fillStyle = "blue";
+                        ctx.fillRect = (10, 40, 100, 30);    
+                    }
+                    
+
+            </script>
+    </body>
+</html>

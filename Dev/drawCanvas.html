@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#Canvas1{
+			top: 400px;
+			left: 680px;
+			position: absolute;
+		}
+		#Canvas2{
+			top: 400px;
+			left: 790px;
+			position: absolute;
+		}
+		#Canvas3{
+			top: 400px;
+			left: 900px;
+			position: absolute;
+		}
+		#Canvas4{
+			top: 400px;
+			left: 1010px;
+			position: absolute;
+		}
+		#Canvas5{
+			top: 400px;
+			left: 1120px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+
+		<canvas id="Canvas1" width="100px" height="100px"></canvas>
+		<canvas id="Canvas2" width="100px" height="100px"></canvas>
+		<canvas id="Canvas3" width="100px" height="100px"></canvas>
+		<canvas id="Canvas4" width="100px" height="100px"></canvas>
+		<canvas id="Canvas5" width="100px" height="100px"></canvas>
+
+	
+        <script language="javascript" type="text/javascript">
+            // Lấy thẻ HTML Canvas
+            // var mydiv = document.getElementById('myDiv');
+            var canvas1 = document.getElementById('Canvas1');
+ 			var canvas2 = document.getElementById('Canvas2');
+ 			var canvas3 = document.getElementById('Canvas3');
+ 			var canvas4 = document.getElementById('Canvas4');
+ 			var canvas5 = document.getElementById('Canvas5');
+
+ 			// Vẽ mô hình 2d Canvas
+ 			// var context = mydiv.getContext('2d');
+            var context1 = canvas1.getContext('2d');
+            var context2 = canvas2.getContext('2d');
+            var context3 = canvas3.getContext('2d');
+            var context4 = canvas4.getContext('2d');
+            var context5 = canvas5.getContext('2d');
+
+            // Thiết lập màu
+            // context.fillStyle = 'yellow';
+            context1.fillStyle = 'blue';
+            context2.fillStyle = 'green';
+            context3.fillStyle = 'red';
+            context4.fillStyle = 'yellow';
+            context5.fillStyle = 'pink';
+
+        </script>
+</body>
+</html>

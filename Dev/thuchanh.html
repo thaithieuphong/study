@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#frame{
+			width: 250px;
+			height: 150px;
+			background: cyan;
+			position: relative;
+		}
+		/*#canvs1{
+			width: 50px;
+			height: 50px;
+			background: blue;
+			position: absolute;
+		}
+		#canvs2{
+			width: 50px;
+			height: 50px;
+			background: red;
+			position: absolute;
+		}*/
+	</style>
+	<script type="text/javascript" language="javascript">
+		
+	</script>
+</head>
+<body>
+		<canvas id="canvs1" width="100" height="100"></canvas>
+		<canvas id="canvs2" width="100" height="100"></canvas>
+	
+	<script type="text/javascript" language="javascript">
+		// let elemen = document.elementFromPoint(x, y);
+		// let centerX = document.documentElement.clientWidth/2;
+		// let centerX = document.documentElement.clientWidth/2;
+		// elemen.style.background = "red";
+		// alert(elemen.tagname);
+
+
+		// Function dataCanvas chứa dữ liệu của đối tượng hình vuông trong mảng
+		function dataCanvas(){
+			this.isSelected = false; // Method isSelect lưu trữ trạng thái của Canvas
+			this.x = 0; // Tọa độ x của Canvas
+			this.y = 0; // Tọa độ y của Canvas
+			this. width = 1; // Độ rộng của Canvas
+			this.height = 1; // Độ cao của Canvas
+		}
+
+		// Phương thức kiểm tra tọa độ [x,y] của Canvas
+		dataCanvas.prototype.isContain = function(x,y) {
+			var right = this.x + this.width;
+			var bottom = this.y + this.height;
+			return x > this.x && x <right && y > this.y && y < bottom;
+		}
+
+		// Function ShapeList chứa các đối tượng dataCanvas trong một mảng
+		function shapeList(){
+			this.items = []; // Lưu các đối tượng dataCanvas vào mảng
+			this.selectedItem = null; // selectedItem chỉ ra đối tượng dataCanvas đang được tìm
+			this.offsetX = -1; // Lưu tọa độ x của dataCanvas
+			this.offsetY = -1; // Lưu tọa độ y của dataCanvas
+		}
+
+		// addItem thêm một đối tượng dataCanvas vào mảng
+		shapeList.prototype.addItem = function(x, y, width, height){
+			var canvas = new dataCanvas; // Lấy dữ liệu tọa độ của dataCanvas gán vào đối tượng canvas
+			canvas.x = x;
+			canvas.y = y;
+			canvas.width = width;
+			canvas.height = height;
+
+			this.items.push(canvas); // Đẩy đối tượng canvas vào mảng
+		}
+
+		// Tìm và chọn đối tượng chứa tọa độ [x,y]
+		shapeList.prototype.selectAt = function(x,y){
+			if(this.selectedItem) // Nếu tại đối tượng được chọn
+				this.selectedItem.isSelected = false; // Thực hiện tìm đến trạng thái của đối tượng được chọn
+			this.selectedItem = null; // Trả về trạng thái của đối tượng được chọn bằng null;
+			// Tìm vị trí của đối tượng được chọn trong mảng
+			for (var i = 0; i < this.items.length; i++){
+				var canvas = this.items[i]; // đối tượng canvas sẽ là vị trí hiện tại của đối tượng được chọn trong mảng
+				//Nếu đối tượng canvas chứa tọa độ [x,y] thì trả về dữ liệu dataCanvas của canvas
+				if(canvas.contains(x,y))
+				{
+					this.selectedItem = this.items[i]; // Trạng thái của canvas sẽ bằng trạng thái tại vị trí i
+					this.offsetX = x -  this.items[i].x;  // Tọa độ x sẽ = tọa độ x ban đầu - tọa độ x tại vị trí i
+					this.offsetY = y - this.items[i].y; // Tọa độ y sẽ = tọa độ y ban đầu - tọa độ y tại vị trí i
+					this.items[i].isSelected = true; // => Vị trí của đối tượng được chọn = true
+					break; // Thoát điều kiện
+				}
+			}
+		}
+
+		// // Vẽ một đối tượng canvas bằng context
+		// function draw(){
+  //   	clear();
+  //   	for (var i = _list.items.length-1;i>=0; i--) {
+  //       		drawRect(_list.items[i]);
+  //   		}
+		// }
+ 
+		// function drawRect(rect){
+  //   		_context.fillRect(rect.x,rect.y,rect.width,rect.height);
+  //   		if(rect.isSelected)
+  //   		{
+  //       		_context.save();
+  //       		_context.strokeStyle = "red";
+  //       		_context.strokeRect(rect.x,rect.y,rect.width,rect.height);
+  //       		_context.restore();
+  //   		}
+		// }
+
+
+
+		// Hàm chạy chính
+		function main(){
+			if(a[i] > a[j]){
+				// thực hiện hoán đổi vị trí 2 giá trị trong mảng
+				// gọi function sắp xếp vào đây
+				// gọi function hoán đổi canvas
+			}
+			else
+			{
+				// tăng i lên 1, tăng j lên 1
+			}
+		}
+
+
+		// Hàm di chuyển canvas từ vị trí đứng đi ra ngoài mảng (a < b ? up && turnRight : down && turnLeft)
+		setTimeout(function move(){
+
+		}, 
+
+		// Hàm thực hiện chức năng sắp xếp mảng
+		function sortArray(){
+
+		}
+	</script>
+</body>
+</html>
